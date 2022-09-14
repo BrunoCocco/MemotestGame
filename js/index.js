@@ -1,4 +1,3 @@
-
 class Memotec {
     constructor(cartas){
         this.cartas = cartas.concat(cartas);
@@ -25,23 +24,27 @@ class Memotec {
     }
     cargarCartas(){
         const divCartas = document.getElementById("divCartas");
-        console.log(divCartas);
         for(let i=0;i<this.totalCartas; i++){
             divCartas.children[i].src = "./assets/reverso.png";
             divCartas.children[i].className = this.cartas[i];
             divCartas.children[i].addEventListener( "click" , this.comprobarCartasIguales.bind(this))
             };
     }
+
     comprobarCartasIguales(e){
-        this.contadorClicks++;
-        if(this.contadorClicks% 2 != 0){
-            this.ultimosClicksimos[0] = e.target.className;
-        }else if(this.contadorClicks% 2 == 0){
-            this.ultimosClicksimos[1] = e.target.className;
+        this.contadorClicks = this.contadorClicks +1;
+
+        if(this.contadorClicks % 2 != 0){
+            this.ultimosClicks[0] = e.target.className;
+        }else if(this.contadorClicks % 2 == 0){
+            this.ultimosClicks[1] = e.target.className;
         }
-    }
-};
-        
+        if(this.ultimosClicks[0] == this.ultimosClicks[1]){
+            
+        }
+    };
+
+};        
 const pokemon= ["ho-oh","leafeon","manectric","pikacgu","rayquaza","reshiran","suicune","vaporeon"];
 
 const juego = new Memotec(pokemon);
