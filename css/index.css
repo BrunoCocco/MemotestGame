@@ -1,18 +1,7 @@
-body{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-}
-
-
-#filaSuperior, #filaInferior{
-    display: flex;
-    justify-content: space-evenly;
-    margin-bottom:1rem;
-}
-
 img{
-    max-width:10%;
+    max-width:40%;
 }
-
-
+.dimensiones--cartas{
+    height:600px;
+    width: 400px;
+}

@@ -114,7 +114,7 @@ juego.cargarCartas();
 //         //recorrer elemento html y sus hijos (<img>) para ponerles imagen reverso 
 //         //y añadir clase y listener
 //         for(let i = 0; i < this.totalCartas; i++){
-//            divCartas.children[i].src = "reverso.png";
+//            divCartas.children[i].src = "./assets/reverso.png";
 //            divCartas.children[i].className = this.cartas[i];
 //            divCartas.children[i].addEventListener("click",this.comprobarCartasIguales.bind(this)); //se hace con bind para poder trabajar con this
 //         }
@@ -148,8 +148,8 @@ juego.cargarCartas();
 //                 }
 //             }else{
 //                 setTimeout( () => { //girar las imagenes al fallar despues de 1500 milisegundos
-//                     this.ultimosClicks[0].src = "reverso.png";
-//                     this.ultimosClicks[1].src = "reverso.png";
+//                     this.ultimosClicks[0].src = "./assets/reverso.png";
+//                     this.ultimosClicks[1].src = "./assets/reverso.png";
 //                 }, 1500);
                 
 //             }
@@ -163,3 +163,5 @@ juego.cargarCartas();
 // const pokemons = ["ho-oh","leafeon","manectric","pikachu","rayquaza","reshiram","suicune","vaporeon"];
 // const juego = new Memotec(pokemons);
 // juego.start();
+// juego.ordenarCartasAleatoriamente()
+// juego.cargarCartas()
