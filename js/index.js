@@ -50,7 +50,8 @@ const pokemon= ["ho-oh","leafeon","manectric","pikacgu","rayquaza","reshiran","s
 const juego = new Memotec(pokemon);
 
 
-
+juego.ordenarCartasAleatoriamente();
+juego.cargarCartas();
 
     
 
